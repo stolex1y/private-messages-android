@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1084430372668",
+    "project_id": "notifywl-2d467",
+    "storage_bucket": "notifywl-2d467.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084430372668:android:d9085504fea0c54a3dd839",
+        "android_client_info": {
+          "package_name": "ru.stolexiy.nwl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084430372668-lm5ftiecej4ap93524pdk4lsf5pdt7mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKCWNQEP-lzvQweiJHleWtH1TuR5O1co4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084430372668-lm5ftiecej4ap93524pdk4lsf5pdt7mt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
