@@ -20,3 +20,6 @@ dependencyResolutionManagement {
 rootProject.name = "PrivateMessages"
 include(":app")
 include(":sender")
+include(":data")
+include(":domain")
+include(":common")

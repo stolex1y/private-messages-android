@@ -1,4 +1,4 @@
-package ru.stolexiy.pmsg.receiver.common
+package ru.stolexiy.pmsg.common
 
 import java.util.Calendar
 

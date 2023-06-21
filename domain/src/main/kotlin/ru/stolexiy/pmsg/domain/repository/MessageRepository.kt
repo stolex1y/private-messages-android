@@ -1,7 +1,7 @@
-package ru.stolexiy.pmsg.receiver.domain.repository
+package ru.stolexiy.pmsg.domain.repository
 
 import kotlinx.coroutines.flow.Flow
-import ru.stolexiy.pmsg.receiver.domain.model.DomainMessage
+import ru.stolexiy.pmsg.domain.model.DomainMessage
 
 interface MessageRepository {
     fun getAll(): Flow<List<DomainMessage>>

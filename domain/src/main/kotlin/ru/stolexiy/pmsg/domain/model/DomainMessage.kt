@@ -1,7 +1,7 @@
-package ru.stolexiy.pmsg.receiver.domain.model
+package ru.stolexiy.pmsg.domain.model
 
-import ru.stolexiy.pmsg.receiver.common.DateUtils.isNotPast
-import ru.stolexiy.pmsg.receiver.common.DateUtils.isPast
+import ru.stolexiy.pmsg.common.DateUtils.isNotPast
+import ru.stolexiy.pmsg.common.DateUtils.isPast
 import java.util.*
 
 data class DomainMessage(

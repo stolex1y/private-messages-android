@@ -1,6 +1,6 @@
-package ru.stolexiy.pmsg.receiver.data.remote.model
+package ru.stolexiy.pmsg.data.model
 
-import ru.stolexiy.pmsg.receiver.domain.model.DomainMessage
+import ru.stolexiy.pmsg.domain.model.DomainMessage
 
 data class RemoteMessage(
     val id: Int,

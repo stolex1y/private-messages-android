@@ -1,8 +1,8 @@
-package ru.stolexiy.pmsg.receiver.data.repository
+package ru.stolexiy.pmsg.data.repository
 
 import kotlinx.coroutines.flow.Flow
-import ru.stolexiy.pmsg.receiver.domain.model.DomainMessage
-import ru.stolexiy.pmsg.receiver.domain.repository.MessageRepository
+import ru.stolexiy.pmsg.domain.model.DomainMessage
+import ru.stolexiy.pmsg.domain.repository.MessageRepository
 
 class MessageRepositoryImpl(
 

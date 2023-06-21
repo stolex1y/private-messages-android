@@ -3,7 +3,17 @@ package modules
 import org.gradle.api.JavaVersion
 
 abstract class BaseModuleConfig {
-    abstract val namespace: String
+    val appNamespace = "ru.stolexiy.pmsg"
+    open val moduleNamespace: String = ""
+    open val moduleName: String
+        get() = moduleNamespace
+
+    val namespace: String
+        get() = if (moduleNamespace == "")
+            appNamespace
+        else
+            "$appNamespace.$moduleNamespace"
+
     abstract val versionCode: Int
     abstract val versionName: String
 
