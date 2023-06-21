@@ -12,8 +12,8 @@ abstract class BaseModuleConfig {
     open val targetSdk = 33
 
     open val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    open val proguardConsumerRules =  "consumer-rules.pro"
-    open val testProguardRules =  "consumer-rules.pro"
+    open val proguardConsumerRules = "consumer-rules.pro"
+    open val testProguardRules = "consumer-rules.pro"
     open val proguardRules = "proguard-rules.pro"
     open val dimension = "environment"
 

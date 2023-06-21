@@ -127,11 +127,14 @@ object AppDependencies {
     private const val firebaseBom =
         "com.google.firebase:firebase-bom:${DependencyVersion.firebaseBom}"
     private const val firebaseAnalyticsKtx =
-        "com.google.firebase:firebase-analytics-ktx:${DependencyVersion.firebaseAnalyticsKtx}"
+        "com.google.firebase:firebase-analytics-ktx"
+    private const val firebaseFirestoreKtx =
+        "com.google.firebase:firebase-firestore-ktx"
 
     fun DependencyHandler.firebase() {
-        platform(firebaseBom)
+        add(ConfigurationName.IMPLEMENTATION.configName, platform(firebaseBom))
         add(ConfigurationName.IMPLEMENTATION.configName, firebaseAnalyticsKtx)
+        add(ConfigurationName.IMPLEMENTATION.configName, firebaseFirestoreKtx)
     }
 
     //test libs
