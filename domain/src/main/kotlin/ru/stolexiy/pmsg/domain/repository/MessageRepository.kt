@@ -5,10 +5,9 @@ import ru.stolexiy.pmsg.domain.model.DomainMessage
 
 interface MessageRepository {
     fun getAll(): Flow<List<DomainMessage>>
-    fun get(id: Long): Flow<DomainMessage?>
-    fun getAllByTask(taskId: Long): Flow<List<DomainMessage>>
-    suspend fun update(vararg subtasks: DomainMessage): Unit
-    suspend fun delete(vararg subtasks: DomainMessage): Unit
-    suspend fun insert(vararg subtasks: DomainMessage): List<Long>
+    fun get(id: String): Flow<DomainMessage?>
+    suspend fun update(vararg messages: DomainMessage): Unit
+    suspend fun delete(vararg messages: DomainMessage): Unit
+    suspend fun insert(vararg messages: DomainMessage): List<String>
     suspend fun deleteAll(): Unit
 }

@@ -62,6 +62,7 @@ android {
 
 dependencies {
     moduleImplementation(Modules.DOMAIN)
+    moduleImplementation(Modules.COMMON)
     kotlinStdLib()
     androidCoreKtx()
     firebase()

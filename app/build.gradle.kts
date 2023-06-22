@@ -16,11 +16,13 @@ import AppDependencies.junit4
 import AppDependencies.kotlinStdLib
 import AppDependencies.lifecycle
 import AppDependencies.material
+import AppDependencies.moduleImplementation
 import AppDependencies.navigation
 import AppDependencies.preference
 import AppDependencies.timberAndroid
 import AppDependencies.workManager
 import modules.AppModuleConfig
+import modules.Modules
 
 plugins {
     id(Plugins.APPLICATION)
@@ -79,6 +81,9 @@ android {
 }
 
 dependencies {
+    moduleImplementation(Modules.DOMAIN)
+    moduleImplementation(Modules.COMMON)
+    moduleImplementation(Modules.DATA)
     kotlinStdLib()
     androidCoreKtx()
     appcompat()

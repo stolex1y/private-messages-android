@@ -4,8 +4,8 @@ import android.app.Application
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.HiltAndroidApp
-import ru.stolexiy.pmsg.receiver.data.remote.model.RemoteMessage.Companion.toRemoteMessage
-import ru.stolexiy.pmsg.receiver.domain.model.DomainMessage
+import ru.stolexiy.pmsg.data.model.RemoteMessage.Companion.toRemoteMessage
+import ru.stolexiy.pmsg.domain.model.DomainMessage
 import timber.log.Timber
 
 @HiltAndroidApp
@@ -15,8 +15,7 @@ class Application : Application() {
         Timber.plant(Timber.DebugTree())
         val db = Firebase.firestore
         val message = DomainMessage(
-            0,
-            "Test message"
+            message = "Test message"
         )
         db.collection("messages")
             .add(message.toRemoteMessage())

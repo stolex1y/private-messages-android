@@ -5,7 +5,7 @@ import ru.stolexiy.pmsg.common.DateUtils.isPast
 import java.util.*
 
 data class DomainMessage(
-    val id: Int? = null,
+    val id: String? = null,
     val message: String,
     val isShown: Boolean = false,
     val showTimestamp: Calendar = Calendar.getInstance(),

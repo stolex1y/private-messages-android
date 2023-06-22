@@ -1,4 +1,6 @@
 import AppDependencies.androidAnnotation
+import AppDependencies.coroutines
+import AppDependencies.kotlinStdLib
 import modules.CommonModuleConfig
 
 plugins {
@@ -24,4 +26,6 @@ kotlin {
 
 dependencies {
     androidAnnotation()
+    kotlinStdLib()
+    coroutines()
 }
