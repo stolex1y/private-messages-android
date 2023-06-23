@@ -1,8 +1,8 @@
 package ru.stolexiy.pmsg.domain.model
 
-import ru.stolexiy.pmsg.common.DateUtils.isNotPast
 import ru.stolexiy.pmsg.common.DateUtils.isPast
-import java.util.*
+import ru.stolexiy.pmsg.domain.paging.Field
+import java.util.Calendar
 
 data class DomainMessage(
     val id: String? = null,
@@ -13,10 +13,18 @@ data class DomainMessage(
 ) {
     init {
         require(message.isNotBlank())
-        require(showTimestamp.isNotPast())
         if (isShown)
             require(shownTimestamp?.isPast() == true)
         else
             require(shownTimestamp == null)
+    }
+
+    enum class Fields(
+        override val fieldName: String
+    ) : Field {
+        SHOW_TIMESTAMP("showTimestamp"),
+        SHOWN_TIMESTAMP("shownTimestamp"),
+        IS_SHOWN("isShown"),
+        MESSAGE("message"),
     }
 }

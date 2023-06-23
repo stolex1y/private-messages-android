@@ -14,7 +14,7 @@ import modules.DataModuleConfig
 import modules.Modules
 
 plugins {
-    id(Plugins.APPLICATION)
+    id(Plugins.ANDROID_LIBRARY)
     id(Plugins.KOTLIN_KAPT)
     id(Plugins.GMS)
     id(Plugins.KOTLIN_ANDROID)

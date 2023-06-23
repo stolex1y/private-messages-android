@@ -6,4 +6,5 @@ object Modules {
     val DATA = DataModuleConfig.moduleName
     val COMMON = CommonModuleConfig.moduleName
     val DOMAIN = DomainModuleConfig.moduleName
+    val UI_UTILS = UiUtilsModuleConfig.moduleName
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="internal_error">Произошла внутренняя ошибка приложения</string>
+    <string name="background_work">Фоновая работа</string>
+    <string name="message_list">Список сообщений</string>
+</resources>

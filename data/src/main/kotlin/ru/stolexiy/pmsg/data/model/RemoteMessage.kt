@@ -2,19 +2,24 @@ package ru.stolexiy.pmsg.data.model
 
 import ru.stolexiy.pmsg.common.DateUtils.toCalendar
 import ru.stolexiy.pmsg.domain.model.DomainMessage
+import ru.stolexiy.pmsg.domain.paging.Filter
+import java.util.Calendar
 
-data class RemoteMessage(
-    val message: String,
-    val isShown: Boolean,
-    val showTimestamp: Long,
-    val shownTimestamp: Long?
+class RemoteMessage(
+    var message: String,
+    var isShown: Boolean,
+    var showTimestamp: Long,
+    var shownTimestamp: Long?
 ) {
+    constructor() : this(
+        message = "",
+        isShown = false,
+        showTimestamp = 0,
+        shownTimestamp = null
+    )
+
     companion object {
         const val COLLECTION = "messages"
-        const val FIELD_SHOW_TIMESTAMP = "showTimestamp"
-        const val FIELD_SHOWN_TIMESTAMP = "shownTimestamp"
-        const val FIELD_IS_SHOWN = "shown"
-        const val FIELD_MESSAGE = "message"
 
         fun DomainMessage.toRemoteMessage() = RemoteMessage(
             message = message,

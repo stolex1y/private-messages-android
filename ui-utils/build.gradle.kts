@@ -5,41 +5,33 @@ import AppDependencies.androidCoreKtx
 import AppDependencies.androidTest
 import AppDependencies.appcompat
 import AppDependencies.coroutines
-import AppDependencies.firebase
 import AppDependencies.fragment
 import AppDependencies.gson
 import AppDependencies.hilt
-import AppDependencies.hiltNavigation
-import AppDependencies.hiltTest
 import AppDependencies.hiltWorkManager
 import AppDependencies.junit4
 import AppDependencies.kotlinStdLib
 import AppDependencies.lifecycle
 import AppDependencies.material
 import AppDependencies.moduleImplementation
-import AppDependencies.navigation
-import AppDependencies.preference
 import AppDependencies.timberAndroid
 import AppDependencies.workManager
-import modules.AppModuleConfig
 import modules.Modules
+import modules.UiUtilsModuleConfig
 
 plugins {
-    id(Plugins.APPLICATION)
-    id(Plugins.KOTLIN_KAPT)
-    id(Plugins.KSP)
-    id(Plugins.NAV_SAFEARGS)
+    id(Plugins.ANDROID_LIBRARY)
     id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.KOTLIN_KAPT)
     id(Plugins.HILT)
 }
 
 android {
-    val moduleConfig = AppModuleConfig
+    val moduleConfig = UiUtilsModuleConfig
     namespace = moduleConfig.namespace
     compileSdk = moduleConfig.compileSdk
 
     defaultConfig {
-        applicationId = moduleConfig.namespace
         minSdk = moduleConfig.minSdk
         version = moduleConfig.versionCode
 
@@ -48,6 +40,11 @@ android {
         testProguardFiles(
             moduleConfig.testProguardRules
         )
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
 
     buildTypes {
@@ -61,13 +58,7 @@ android {
 
         debug {
             isMinifyEnabled = false
-            isDebuggable = true
         }
-    }
-
-    buildFeatures {
-        viewBinding = true
-        dataBinding = true
     }
 
     compileOptions {
@@ -80,31 +71,22 @@ android {
 }
 
 dependencies {
-    moduleImplementation(Modules.DOMAIN)
     moduleImplementation(Modules.COMMON)
-    moduleImplementation(Modules.DATA)
-    moduleImplementation(Modules.UI_UTILS)
-
     kotlinStdLib()
-    androidCoreKtx()
     appcompat()
-    androidConstraintLayout()
-    lifecycle()
-    firebase()
     activityKtx()
     fragment()
+    androidConstraintLayout()
+    material()
+    lifecycle()
+    androidCoreKtx()
     androidTest()
     junit4()
-    material()
+    workManager()
+    hiltWorkManager()
+    hilt()
     coroutines()
     timberAndroid()
     androidAnnotation()
-    hilt()
-    hiltNavigation()
-    hiltWorkManager()
-    hiltTest()
-    navigation()
-    workManager()
     gson()
-    preference()
 }

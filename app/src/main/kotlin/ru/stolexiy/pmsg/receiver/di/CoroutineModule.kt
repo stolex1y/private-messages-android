@@ -11,10 +11,11 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.newSingleThreadContext
-import ru.stolexiy.pmsg.common.di.CoroutineDispatcherNames.DEFAULT_DISPATCHER
-import ru.stolexiy.pmsg.common.di.CoroutineDispatcherNames.MAIN_DISPATCHER
+import ru.stolexiy.pmsg.common.di.CoroutineComponentNames.APPLICATION_SCOPE
+import ru.stolexiy.pmsg.common.di.CoroutineComponentNames.DEFAULT_DISPATCHER
+import ru.stolexiy.pmsg.common.di.CoroutineComponentNames.IO_DISPATCHER
+import ru.stolexiy.pmsg.common.di.CoroutineComponentNames.MAIN_DISPATCHER
 import ru.stolexiy.pmsg.common.di.SingleThreadDispatcherProvider
-import ru.stolexiy.pmsg.common.di.CoroutineDispatcherNames.IO_DISPATCHER
 import timber.log.Timber
 import javax.inject.Named
 import javax.inject.Singleton
@@ -24,8 +25,6 @@ import javax.inject.Singleton
 interface CoroutineModule {
 
     companion object {
-        const val APPLICATION_SCOPE = "Application scope"
-
         @Named(IO_DISPATCHER)
         @Provides
         @Singleton

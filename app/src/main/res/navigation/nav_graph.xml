@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/message_list_fragment">
+
+    <fragment
+        android:id="@+id/message_list_fragment"
+        android:name="ru.stolexiy.pmsg.receiver.ui.messages.MessageListFragment"
+        android:label="@string/message_list" />
+</navigation>

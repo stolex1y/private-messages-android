@@ -1,5 +1,6 @@
 import AppDependencies.androidAnnotation
 import AppDependencies.coroutines
+import AppDependencies.gson
 import AppDependencies.kotlinStdLib
 import modules.CommonModuleConfig
 
@@ -28,4 +29,5 @@ dependencies {
     androidAnnotation()
     kotlinStdLib()
     coroutines()
+    gson()
 }

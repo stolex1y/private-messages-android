@@ -7,6 +7,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:642267849320:android:0c18e8f8002bd419ed51dd",
+        "android_client_info": {
+          "package_name": "ru.stolexiy.pmsg.data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642267849320-591b9mq3k75fsc36kftsarpdc3cqfk96.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ru.stolexiy.pmsg.data",
+            "certificate_hash": "4e02ebdfc360a4d7a198566096d46b49b581192e"
+          }
+        },
+        {
+          "client_id": "642267849320-g48rm6f4sb5dr7krjdc0ji7gan1j8sbs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOVcdAEhgOnhux2edIyeOE_PsunQOFZrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642267849320-g48rm6f4sb5dr7krjdc0ji7gan1j8sbs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:642267849320:android:6cc765f557954a33ed51dd",
         "android_client_info": {
           "package_name": "ru.stolexiy.pmsg.receiver"
