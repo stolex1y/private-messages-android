@@ -1,4 +1,4 @@
-package ru.stolexiy.pmsg.receiver.di
+package ru.stolexiy.pmsg.ui.util.di
 
 import dagger.Module
 import dagger.Provides

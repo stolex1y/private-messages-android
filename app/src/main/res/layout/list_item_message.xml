@@ -28,17 +28,18 @@
             app:layout_constraintEnd_toStartOf="@id/message_shown_date"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:text="@{data.message}"
             tools:text="Частное сообщение. Фвфывао. Фывафыв. фывачофв вфывауш. asdfasdfjei. adsf. asdfasdflkj" />
 
         <TextView
             android:id="@+id/message_shown_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="@id/message_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/message_text"
             app:layout_constraintTop_toTopOf="@id/message_text"
+            android:text="@{data.shownTimestampStr}"
             tools:text="24.06.2023" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

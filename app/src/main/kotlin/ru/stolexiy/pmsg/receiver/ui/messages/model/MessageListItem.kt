@@ -1,5 +1,6 @@
 package ru.stolexiy.pmsg.receiver.ui.messages.model
 
+import ru.stolexiy.pmsg.common.Converters
 import ru.stolexiy.pmsg.domain.model.DomainMessage
 import ru.stolexiy.pmsg.ui.util.recyclerview.ListItem
 import java.util.Calendar
@@ -9,6 +10,9 @@ data class MessageListItem(
     val message: String,
     val shownTimestamp: Calendar,
 ) : ListItem<String> {
+    val shownTimestampStr: String
+        get() = Converters.CALENDAR_DMY_CONVERTER.convert(shownTimestamp)
+
     companion object {
         private fun DomainMessage.toMessageListItem(): MessageListItem {
             requireNotNull(id)

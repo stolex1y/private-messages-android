@@ -24,7 +24,7 @@ data class DomainMessage(
     ) : Field {
         SHOW_TIMESTAMP("showTimestamp"),
         SHOWN_TIMESTAMP("shownTimestamp"),
-        IS_SHOWN("isShown"),
+        IS_SHOWN("shown"),
         MESSAGE("message"),
     }
 }

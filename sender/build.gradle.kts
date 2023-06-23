@@ -84,6 +84,8 @@ dependencies {
     moduleImplementation(Modules.DOMAIN)
     moduleImplementation(Modules.COMMON)
     moduleImplementation(Modules.DATA)
+    moduleImplementation(Modules.UI_UTILS)
+
     kotlinStdLib()
     androidCoreKtx()
     appcompat()
