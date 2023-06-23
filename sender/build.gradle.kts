@@ -28,7 +28,6 @@ plugins {
     id(Plugins.APPLICATION)
     id(Plugins.KOTLIN_KAPT)
     id(Plugins.KSP)
-    id(Plugins.GMS)
     id(Plugins.NAV_SAFEARGS)
     id(Plugins.KOTLIN_ANDROID)
     id(Plugins.HILT)
